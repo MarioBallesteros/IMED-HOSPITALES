@@ -1,0 +1,88 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.cabecera{
+background-color: #FFFFFFE6;
+position: sticky;
+height: 100px;
+top: 0px;
+opacity: 0.75;
+}
+.nav{
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 885px;
+	list-style: none;
+	text-decoration: none;
+}
+.nav li a{
+	margin-bottom: 19px;
+	margin-left: 10px;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	padding: 15px 15px;
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	font-family: 'Josefin Sans', sans-serif;
+	float: left;	
+}
+.nav li a:hover{
+	background-color: white;
+	color: #FFC300;
+	text-decoration: none;
+	padding: 15px 15px;
+	display: block;
+}
+
+.nav ul li{
+	float: left;
+    margin-left: 20px;
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+}
+ul{
+    list-style: none;
+    margin-left: 300px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+.logo{
+    margin-bottom: -30px;
+
+}
+.im{
+    margin-top: 25px;
+}
+
+@keyframes menu{
+	0%{
+		color: rgb(0, 0, 0);
+	}
+	100%{
+		color: #db2323;
+	}
+}
+.fondo{
+    
+    width: 1889px;
+    height: 1000px;
+background-image: url("../imagenes/hospital.jpg");
+background-color: red;
+}
+
+
+.upperlogo{
+	margin-top: 10px;
+	margin-left: 70px;
+	display: inline-block;
+}
+
+
+

@@ -1,0 +1,617 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+ul{
+	list-style: none;
+}
+
+.cabecera{
+	background-color: #FFFFFFE6;
+	position: sticky;
+	height: 100px;
+	top: 0px;	
+	opacity: 0.7;
+	z-index: 2000;
+}
+.upperlogo{
+	margin-top: -35px;
+	margin-left: 330px;
+	display: inline-block;
+
+}
+.footerlogo{
+	margin-left: 0px;
+	display: inline-block;
+
+}
+.buttonclass{
+	background-color: #0078C9;
+	color: #FFFFFFE6;
+	font-size: 16px;
+	margin:5px;
+}
+.formBg{
+	background-image: url("../imagenes/hola.jpg");
+	height: 850px;
+	margin-bottom: -130px;
+}
+.formBody{
+	background-color: white;
+}
+.nav{
+	margin-left: 800px;
+	list-style: none;
+	text-decoration: none;
+	display: inline-block;
+}
+.nav ul li{
+	float: left;
+}
+
+.nav li a{
+	margin-bottom: 40px;
+	margin-left: 10px;
+	color: #0078C9;
+	text-decoration: none;
+	padding: 15px 15px;
+	display: block;
+	font-size: 18px;
+	font-weight: normal;
+	font-family: 'Josefin Sans', sans-serif;
+	float: left;	
+}
+.nav li a:hover{
+	color: #53baff;
+	text-decoration: none;
+	padding: 15px 15px;
+	display: block;
+}
+.formularioPacientes{
+	color: #808080;
+	margin-top: 120px;
+	margin-left: 680px;
+	display: inline-block;
+}
+.resaltoTexto{
+	text-align: center;
+	font-weight: bold;
+
+}
+.label{
+	margin-left: 5px;
+}
+.infoHospital{
+	color: #0078C9;
+	margin:0px,0px,20px;
+	font-size: 22px;
+	margin-left: 400px;
+	margin-top: 30px;
+font-weight: bold;
+}
+#menu {
+	text-align: center;
+	font-size: 0.7em;
+	width: 540px;
+	margin: 20px auto;
+}
+.mapa{
+	height: 480px;
+	width: 1705px;
+}
+.box{
+	margin-top: -100px; 
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align: center;
+	font-size: 30px;
+	background: white;
+	height: 1980px;
+	width: 1900px;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+.boxnosotros{
+	margin-top: 5px;
+	margin-left: 100px;
+	margin-right: 100px;
+	text-align: center;
+	font-size: 30px;
+	background: white;
+	height: 1780px;
+	width: 1705px;
+	vertical-align: middle;
+	overflow: hidden;
+}
+.boxcontacto{
+	margin-top: 5px;
+	margin-left: 100px;
+	margin-right: 100px;
+	text-align: center;
+	font-size: 30px;
+	background: white;
+	height: 1600px;
+	width: 1705px;
+	vertical-align: middle;
+	overflow: hidden;
+
+}
+.imagenes{
+	height: 770px;
+	width: 100%;
+	overflow: hidden;
+	background-color: black;
+
+}
+@keyframes zoomimagenes {
+	0%{
+		transform: scaleY(155%);
+
+	}
+	50%{
+		transform: scaleY(175%);
+	}
+	100%{
+		transform: scaleY(155%);
+	}
+}
+.animImg{
+	height: 100%;
+	width: 100%;
+	opacity :1;
+	overflow: hidden;
+	text-align: center;
+	animation: zoomimagenes 45s ease 3s normal backwards;
+	animation-iteration-count: infinite;
+}
+.inicio{
+	list-style: none;
+	text-decoration: none;
+	
+}
+.informacion{
+	margin-top: 23px;
+	font-size: 15px;
+	color: black;
+	background-color: white;
+	height: 50px;
+	width: 100%;
+	margin-left: 470px;
+	list-style: none;
+	text-decoration: none;
+	display: inline-block;
+}
+.informacion li{
+	margin-left: 10px;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	padding: 15px;
+	display: block;
+	float: left;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: 'Josefin Sans', sans-serif;
+	
+}
+.informacion li a{
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	display: block;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	
+}
+.informacion li a:hover{
+	background-color: white;
+	color: #FFC300;
+	text-decoration: none;
+	display: block;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	
+}
+.center{
+	background-color: white;
+	height: 500px;
+	width: 100%;
+	margin-top: 20px;
+}
+.carne{
+	height: 500px;
+	width: 852px;
+	float: left;
+	position: absolute;
+}
+.bienvenida{
+	float: left;
+	height: 500px;
+	width: 650px;
+	position: absolute;
+	background-color: white;
+	margin-left: 520px;
+	border-bottom-color: #646464;
+}
+.bienvenidacabeza{
+	color: #393939;
+	font-size: 40px;
+	margin: 10px 0;
+	font-family: 'Cardo', serif;
+	font-weight: bold;
+}
+.bienvenidatexto{
+	color: #646464;
+	font-size: 18px;
+	margin: 10px 0;
+	font-family: 'Josefin Sans', sans-serif;
+	text-align: center;
+	padding: 26px 55px;
+		list-style: none;
+	text-decoration: none;
+}
+.bienvenidatexto ul li{
+	margin-top: 7px;
+}
+.ensalada{
+	height: 500px;
+	width: 852px;
+	float: right;
+}
+.bot{
+	margin-top: 20px;
+}
+
+.horario{
+	margin-top: 5px;
+	font-size: 15px;
+	color: black;
+	background-color: white;
+	height: 50px;
+	width: 100%;
+	margin-left: 470px;
+	list-style: none;
+	text-decoration: none;
+	display: inline-block;
+}
+.horario li{
+	margin-left: 10px;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	padding: 15px;
+	display: block;
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: 'Josefin Sans', sans-serif;
+}
+.color{
+	color:#e6ae48;
+}
+.colorContacto{
+	color:#e6ae48;
+	font-size: 22px;
+}
+.numreserva{
+	color: #393939;
+	font-size: 24px;
+	font-family: 'Josefin Sans', sans-serif;
+	margin: 10px 0;
+	font-weight: bold;
+	margin-top: 30px;
+}
+
+.inforestaurante{
+	background-color: white;
+	color: #333333;
+	font-size: 16px;
+	font-family: 'Josefin Sans', sans-serif;
+	margin-bottom: 20px;
+	margin-top: 45px;
+	text-align: center;
+}
+.inforestaurante li a{
+	background-color: white;
+	color: #333333;
+	font-size: 15px;
+	font-family: 'Josefin Sans', sans-serif;
+	margin-bottom: 20px;
+}
+.inforestaurante ul li{
+	margin-top: 5px;
+}
+
+.inforestaurante li a:hover{
+	background-color: white;
+	color: #FFC300;;
+	font-size: 15px;
+}
+
+.politicas{
+	margin-left:705px;
+	margin-top: 75px;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Josefin Sans', sans-serif;
+	color: #333333;
+	font-size: 18px;
+}
+
+.politicas ul li{
+	float: left;
+	margin-left: 5px;
+	list-style: none;
+	text-decoration: none;
+}
+.politicas li a:hover{
+	font-family: 'Josefin Sans', sans-serif;
+	color:#FFC300;
+	font-size: 18px;
+	list-style: none;
+	text-decoration: none;
+}
+
+/* FOOTER WEB */
+/* FOOTER WEB */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #333;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+	margin-top: 130px;
+	background: #666;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+/* DESPLEGABLE MENU */
+/* DESPLEGABLE MENU */
+
+ul.acorh,
+ul.acorh * {
+margin: 0;
+padding: 0;
+border: 0;
+}
+ul.acorh {
+margin: 10px auto;
+padding: 0;
+list-style: none;
+width: 100%;
+font-size: 18px;
+}
+ul.acorh li {
+list-style: none;
+}
+ul.acorh li a {
+display: block;
+padding: 10px 10px 10px 20px;
+color: #0078C9;
+border-bottom: 1px solid #000;
+border-top: 1px solid #666;
+text-decoration: none;
+box-sizing: border-box;
+}
+ul.acorh li ul {
+max-height: 0;
+margin: 0;
+padding: 0;
+list-style: none;
+overflow: hidden;
+transition: .3s all ease-in;
+}
+ul.acorh li li a {
+padding: 10px 10px 10px 40px;
+background: #999;
+color: #000;
+font-size: 16px;
+border: 0;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+}
+ul.acorc li li:last-child a {
+border-bottom: 0;
+}
+ul.acorh li:hover ul {
+max-height: 300px;
+transition: .3s all ease-in;
+}
+ul.acorh li a:hover {
+color: #53baff;
+}
+
+

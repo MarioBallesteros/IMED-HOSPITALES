@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Formulario</title>
+	</head>
+	<body>	
+		<form action="crearUsuario.php" method="post">
+			<fieldset style="width: 200px;" >
+			<legend><h1>Crear Usuario</h1></legend>
+			<label>Nombre:</label> 
+				<br>
+				<input size="50" type="text" name="nombre" placeholder="Introduzca su nombre">	
+				<br><br>
+			<label>Apellidos:</label>
+				<br>
+				<input size="50" type="text" name="apellidos" placeholder="Introduzca sus dos apellidos">
+				<br><br>
+			<label>Telefono:</label>
+				<br>
+				<input size="50" type="tel" name="telefono" placeholder="Escriba su teléfono">
+				<br><br>
+			<label>Correo electrónico:</label>
+				<br>
+				<input size="50" type="email" name="correo" placeholder="Escriba su correo email">
+				<br><br>
+
+			<label>Usuario:</label>	
+			<br>
+			<input size="22" type="text" name="usuario" placeholder="Escriba su usuario" maxlength="10" required>
+			<br>
+			<label>	Contraseña:</label>
+			<br>
+			<input size="24" type="password" name="contra" placeholder="Escriba su contraseña" maxlength="10" required>
+			
+			<br><br><br>
+			<input type="submit" value="Registrarse">
+
+			</form>
+		</fieldset>
+	</body>
+</html>
