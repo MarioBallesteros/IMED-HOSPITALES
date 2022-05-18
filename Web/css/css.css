@@ -36,6 +36,11 @@ ul{
 	height: 850px;
 	margin-bottom: -130px;
 }
+.formBgEspera{
+	background-image: url("../imagenes/consulta.jpg");
+	height: 850px;
+	margin-bottom: -130px;
+}
 .formBody{
 	background-color: white;
 }
@@ -44,7 +49,7 @@ ul{
 	margin-left: 2px;
 	width:105%;
 	height: 5;
-	filter:brightness(0.3);
+	filter:brightness(0.4);
 }
 .abovetext{
 	font-family: 'Open Sans', sans-serif;
@@ -57,6 +62,67 @@ ul{
 }
 .margintop{
 	margin-top: 40px;
+}
+.bodyIndex{
+	margin-top: 30px;
+	background-color: lightgray;
+	height: 550px;
+	width: auto;
+
+}
+.bodyIndex .left{
+	float: left;
+	height: 100%;
+	width: 50%;
+}
+.bodyIndex .right{
+	float: right;
+	height: 100%;
+	width: 50%;
+	text-align: center;
+	background-color: #D3D3D3	;
+
+
+}
+.bodyIndex .header{
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 30px;
+	color: #0078C9;
+	font-weight: bold;
+	font-size: 24px;
+	font-family: 'Open Sans', sans-serif;
+
+}
+.bodyIndex .text{
+	float: left;
+	margin-top: 30px;
+	margin-left: 20px;
+	margin-right: 30px;
+	color: #414141;
+	font-family: 'Open Sans', sans-serif;
+
+}
+.bodyIndex .column{
+	float: left;
+	text-align: left;
+	margin-top: 30px;
+	margin-left: 20px;
+	margin-right: 120px;
+	color: #414141;
+	font-size: 17px;
+	font-family: 'Open Sans', sans-serif;
+
+}
+.bodyIndex .ultext{
+	float: left;
+	margin-top: 15px;
+	margin-left: 20px;
+	margin-right: 30px;
+	font-size: 16px;
+	color: #414141;
+	font-family: 'Open Sans', sans-serif;
+
 }
 .nav{
 	margin-left: 800px;
@@ -91,6 +157,7 @@ ul{
 	margin-top: 120px;
 	margin-left: 680px;
 	display: inline-block;
+
 }
 .resaltoTexto{
 	text-align: center;
@@ -157,7 +224,7 @@ font-weight: bold;
 
 }
 .imagenes{
-	height: 850px;
+	height: 900px;
 	width: 100%;
 	overflow: hidden;
 	background-color: black;
