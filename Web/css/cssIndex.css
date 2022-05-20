@@ -1,88 +1,66 @@
-*{
-	margin: 0px;
-	padding: 0px;
-}
-.cabecera{
-background-color: #FFFFFFE6;
-position: sticky;
-height: 100px;
-top: 0px;
-opacity: 0.75;
-}
-.nav{
-    text-decoration: none;
-    display: inline-block;
-    margin-left: 885px;
-	list-style: none;
-	text-decoration: none;
-}
-.nav li a{
-	margin-bottom: 19px;
-	margin-left: 10px;
-	background-color: white;
-	color: black;
-	text-decoration: none;
-	padding: 15px 15px;
-	display: block;
-	font-size: 13px;
-	font-weight: bold;
-	font-family: 'Josefin Sans', sans-serif;
-	float: left;	
-}
-.nav li a:hover{
-	background-color: white;
-	color: #FFC300;
-	text-decoration: none;
-	padding: 15px 15px;
-	display: block;
+body {
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 20px 50px 150px;
+  font-size: 13px;
+  text-align: center;
+  background: #E3CAA1;
 }
 
-.nav ul li{
-	float: left;
-    margin-left: 20px;
-    display: inline-block;
-    text-decoration: none;
-    list-style: none;
+ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
-ul{
-    list-style: none;
-    margin-left: 300px;
+ul li {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 20px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
-a{
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
+ul li:hover {
+  background: #555;
+  color: #fff;
 }
-.logo{
-    margin-bottom: -30px;
-
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
 }
-.im{
-    margin-top: 25px;
+ul li ul li { 
+  background: #555; 
+  display: block; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
 }
-
-@keyframes menu{
-	0%{
-		color: rgb(0, 0, 0);
-	}
-	100%{
-		color: #db2323;
-	}
+ul li ul li:hover { background: #666; }
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }
-.fondo{
-    
-    width: 1889px;
-    height: 1000px;
-background-image: url("../imagenes/hospital.jpg");
-background-color: red;
-}
-
-
-.upperlogo{
-	margin-top: 10px;
-	margin-left: 70px;
-	display: inline-block;
-}
-
-
-

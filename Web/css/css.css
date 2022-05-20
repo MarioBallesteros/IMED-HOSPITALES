@@ -641,6 +641,76 @@ section {
 /* DESPLEGABLE MENU */
 /* DESPLEGABLE MENU */
 
+  ul.navigation {
+	text-align: left;
+	display: block;
+	margin: 0;
+	padding: 15px 4px 17px 0;
+	list-style: none;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  }
+  ul.navigation li {
+	font: bold 12px/18px sans-serif;
+	display: inline-block;
+	margin-right: -4px;
+	position: relative;
+	padding: 0px 15px;
+	background: #FFFFFFE6;
+	cursor: pointer;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+	color: red;
+	background-color: red;
+}
+  ul.navigation li:hover {
+	background: #FFFFFFE6;
+	color: #fff;
+  }
+  ul.navigation li ul {
+	padding: 0;
+	position: absolute;
+	top: 20px;
+	left: 0;
+	width: 150px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transiton: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
+	-ms-transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	-transition: opacity 0.2s;
+  }
+  ul.navigation li ul li { 
+	background: #FFFFFFE6; 
+	display: block; 
+	color: #fff;
+	text-shadow: 0 -1px 0 #000;
+  }
+  ul.navigation li ul li:hover { background: #FFFFFFE6; }
+  ul.navigation li:hover ul {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+  }
+
+
+
+
+
+
+
+
+
+/*
 ul.acorh,
 ul.acorh * {
 margin: 0;
@@ -693,5 +763,5 @@ transition: .3s all ease-in;
 ul.acorh li a:hover {
 color: #53baff;
 }
-
+*/
 
