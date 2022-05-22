@@ -159,6 +159,10 @@ ul{
 	display: inline-block;
 
 }
+.contenedorCentral{
+	width: fit-content;
+	height: fit-content;
+}
 .resaltoTexto{
 	text-align: center;
 	font-weight: bold;
