@@ -68,6 +68,7 @@ ul{
 	background-color: lightgray;
 	height: 550px;
 	width: auto;
+	margin-bottom: -100px;
 
 }
 .bodyIndex .left{
@@ -649,7 +650,7 @@ section {
 	text-align: left;
 	display: block;
 	margin: 0;
-	padding: 15px 4px 17px 0;
+	padding: 15px 40px 17px 0;
 	list-style: none;
 	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
@@ -659,7 +660,7 @@ section {
 	font: bold 12px/18px sans-serif;
 	display: inline-block;
 	margin-right: -4px;
-	position: relative;
+	position: absolute;
 	padding: 0px 15px;
 	background: #FFFFFFE6;
 	cursor: pointer;
@@ -668,10 +669,9 @@ section {
 	-ms-transition: all 0.2s;
 	-o-transition: all 0.2s;
 	transition: all 0.2s;
-	color: red;
-	background-color: red;
 }
   ul.navigation li:hover {
+	margin-top: 10px;
 	background: #FFFFFFE6;
 	color: #fff;
   }
@@ -686,7 +686,7 @@ section {
 	box-shadow: none;
 	display: none;
 	opacity: 0;
-	visibility: hidden;
+	visibility: visible;
 	-webkit-transiton: opacity 0.2s;
 	-moz-transition: opacity 0.2s;
 	-ms-transition: opacity 0.2s;
@@ -699,9 +699,11 @@ section {
 	color: #fff;
 	text-shadow: 0 -1px 0 #000;
   }
-  ul.navigation li ul li:hover { background: #FFFFFFE6; }
+  ul.navigation li ul li:hover { 
+	background: #FFFFFFE6;
+ }
   ul.navigation li:hover ul {
-	display: block;
+	display: inline-block;
 	opacity: 1;
 	visibility: visible;
   }

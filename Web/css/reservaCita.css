@@ -1,13 +1,13 @@
 
 .well {
-    width: 100%;
+    width: 450%;
     border: solid 2px lightblue;
     background-color :lightcyan;
     content:"";
     z-index:-1;
-    -webkit-box-shadow: 0 0 20px rgba(198, 156, 0, 1);
-    -moz-box-shadow: 0 0 20px rgba(198, 156, 0, 1);
-    box-shadow: 0 5px 20px rgba(198, 156, 0, 1);
+    -webkit-box-shadow: 0 0 20px lightblue;
+    -moz-box-shadow: 0 0 20px lightblue;
+    box-shadow: 0 5px 20px lightblue;
 }
 
 .well-header {
@@ -30,8 +30,6 @@
     padding-bottom: 45px;
     height: 5px;
 }
-
-
 
 #disabledSelect{
     padding-bottom: 25px;
