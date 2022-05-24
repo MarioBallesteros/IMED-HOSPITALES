@@ -4841,7 +4841,8 @@ footer {
 
 .gallery-hover {
     position: absolute;
-    background-color: rgba(0,176,146, 0.90);
+    background-color: #0078C9;
+    opacity: 0.90;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
@@ -6230,7 +6231,7 @@ ul.rating-text li, .pro-review ul li, .social-icon ul li {
    background: transparent; 
 }
 .bg-defult {
-    background: #00B092;
+    background: #0078C9;
 }
 .bg-defult-1 {
     background: rgba(0,0,0,.5);
@@ -6242,7 +6243,7 @@ ul.rating-text li, .pro-review ul li, .social-icon ul li {
     background: #F1F1F1;
 }
 .color-defult {
-    color: #00B092;
+    color: #0078C9;
 }
 .color-2 {
     color: #007EA3;
