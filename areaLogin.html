@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<link rel="stylesheet" type="text/css" href="css/cssLogin.css">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -15,7 +17,6 @@
 	<title>HOSPITAL - B.G</title>
 </head>
 <body>
-	
 	<div class="cabecera">
 		<img class="upperlogo" width="300" height="150" src="imagenes/nobg-logo.png">
 		<div class="nav">
@@ -25,89 +26,61 @@
 		</div>
 	</div>
 	
-		<h1 class="infoHospital">Servicios Online Profesionales B.G Hospitales</h1>
-		<div class="formularioPacientes">	
-		<form action="areaPaciente.html" method="post">
-				<br>
-			<h1>Formulario de Acceso</h1>
-			<br>
-			<label>Usuario:</label>	
-			<br>
-			<input size="22" type="text" name="usuario" placeholder="Escriba su usuario" maxlength="10" required>
-			<br><br>
-			<label>	Contraseña:</label>
-			<br>
-			<input size="24" type="password" name="contra" placeholder="Escriba su contraseña" maxlength="10" required>
-			
-			<br><br><br>
-			<input class="buttonclass" type="submit" value="  Login  ">
-			<br><br>
-
-			</form>
+		<h1 class="infoHospital2">Servicios Online Profesionales B.G Hospitales</h1>
+		<br><br>
+		<div class="container" id="container">
+			<div class="form-container sign-up-container">
+				<form action="registroPaciente.html">
+					<button class="button2"><a href="registroPaciente.html"> Registrame</a></button>
+				</form>
+			</div>
+			<div class="form-container sign-in-container">
+				<form action="#">
+					<h1>Inicio de Sesión</h1>
+					<input type="user" placeholder="user" />
+					<input type="password" placeholder="Password" />
+					<a href="#">¿ Has olvidado tu contraseña?</a>
+					<button><a href="areaPaciente.html">Sign In</a></button>
+				</form>
+			</div>
+			<div class="overlay-container">
+				<div class="overlay">
+					<div class="overlay-panel overlay-left">
+						<h1>Registrate ahora mismo</h1>
+						<p>Haz click en "Registrame para crear tu cuenta"</p>
+						<button class="ghost" id="signIn">Volver a inicio de sesión</button>
+					</div>
+					<div class="overlay-panel overlay-right">
+						<h1>¿No tienes cuenta todavia?</h1>
+						<p>Nos encantaría que formaras parte de nuestro hospital</p>
+						<button class="ghost" id="signUp">Mas informacion</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 	</div>
 	
-	<footer class="footer-distributed">
-
-		<div class="footer-left">
-
-			<h3>Hospital<span>B.G</span></h3>
-
-			<p class="footer-links">
-				<a href="#" class="link-1">Home</a>
-				
-				<a href="#">Blog</a>
-			
-				<a href="#">Pricing</a>
-			
-				<a href="#">About</a>
-				
-				<a href="#">Faq</a>
-				
-				<a href="#">Contact</a>
-			</p>
-
-			<p class="footer-company-name">Ballesteros Grueiro © 2022</p>
-		</div>
-
-		<div class="footer-center">
-
-			<div>
-				<i class="fa fa-map-marker"></i>
-				<p><span> Carrer d'Emilia Pardo Bazán</span> 46185 La Pobla de Vallbona, Valencia</p>
-			</div>
-
-			<div>
-				<i class="fa fa-phone"></i>
-				<p>+34 622 09 20 04</p>
-				<br>
-				<p>⠀⠀⠀+34 900 98 33 21</p>
-			</div>
-
-			<div>
-				<i class="fa fa-envelope"></i>
-				<p><a href="mailto:BGhospitales@support.com">BGhospitales@support.com</a></p>
-			</div>
-
-		</div>
-
-		<div class="footer-right">
-
-			<p class="footer-company-about">
-				<span>Ballesteros Grueiro Hospitales</span>
-				Somos un establecimiento destinado para la atención y asistencia a enfermos por medio de personal médico, enfermería, personal auxiliar y de servicios técnicos durante 24 horas, 365 días del año.
-			</p>
-
-			<div class="footer-icons">
-
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-twitter"></i></a>
-				<a href="#"><i class="fa fa-linkedin"></i></a>
-				<a href="#"><i class="fa fa-github"></i></a>
-
-			</div>
-
-		</div>
-
-	</footer>
+	<footer>
+        <p>
+            HOSPITALES  <i class="fa fa-heart"></i> 
+            <a target="_blank">BALLESTEROS GRUEIRO </a>
+            - Curar es lo 
+            <a target="_blank">nuestro</a>.
+        </p>
+    </footer>
 </body>
+<script>
+    const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+</script>
 </html>

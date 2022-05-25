@@ -1,113 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/css.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,400;1,500;1,700&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-	<title>HOSPITAL - B.G</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/css.css">
+		<!-- CSS IMPORTS -->
+		<link rel="stylesheet" href="css/css.css">
+		<link rel="stylesheet" href="css/externo/bootstrap.min.css">
+		<link rel="stylesheet" href="css/externo/style.css">
+		<link rel="stylesheet" type="text/css" href="css/externo/responsive.css">
 	
-	<div class="cabecera">
-		<img class="upperlogo" width="300" height="150" src="imagenes/nobg-logo.png">
-		<div class="nav">
-		<ul>
-			<li class="menu"><a href="index2.html">MENU<span class="material-symbols-outlined">menu_open</span></a> </li>
-		</ul>
-		</div>
-	</div>
 	
-		<h1 class="infoHospital">Servicios Online Profesionales B.G Hospitales</h1>
-		<div class="formularioPacientes">	<form action="crearUsuario.php" method="post">
-		<form action="crearUsuario.php" method="post">
-				<br>
-			<h1>Formulario de Acceso</h1>
-			<br>
-			<label>Usuario:</label>	
-			<br>
-			<input size="22" type="text" name="usuario" placeholder="Escriba su usuario" maxlength="10" required>
-			<br><br>
-			<label>	Contraseña:</label>
-			<br>
-			<input size="24" type="password" name="contra" placeholder="Escriba su contraseña" maxlength="10" required>
-			
-			<br><br><br>
-			<input class="buttonclass" type="submit" value="  Login  ">
-			<br><br>
-
-			</form>
-	</div>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,400;1,500;1,700&display=swap" rel="stylesheet">
+	@@ -14,182 +20,75 @@
 	
-	<footer class="footer-distributed">
-
-		<div class="footer-left">
-
-			<h3>Hospital<span>B.G</span></h3>
-
-			<p class="footer-links">
-				<a href="#" class="link-1">Home</a>
-				
-				<a href="#">Blog</a>
-			
-				<a href="#">Pricing</a>
-			
-				<a href="#">About</a>
-				
-				<a href="#">Faq</a>
-				
-				<a href="#">Contact</a>
-			</p>
-
-			<p class="footer-company-name">Ballesteros Grueiro © 2022</p>
+		<title>HOSPITAL - B.G</title>
+	</head>
+	<body>
+		<div class="cabecera">
+			<img class="upperlogo" width="300" height="150" src="imagenes/nobg-logo.png">
+			<div class="nav">
+				<ul class="navigation">
+					<li><a href="index2.html">MENU<span class="material-symbols-outlined">menu_open</span></a> 
+					  <ul>
+						<li><a href="areaPaciente.html">Portal Paciente</a></li>
+						<li><a href="registroPaciente.html">Portal medico</a></li>
+					  </ul>
+					</li>
+	
+			</ul>
+			</div>
 		</div>
-
-		<div class="footer-center">
-
-			<div>
-				<i class="fa fa-map-marker"></i>
-				<p><span> Carrer d'Emilia Pardo Bazán</span> 46185 La Pobla de Vallbona, Valencia</p>
+	 <!-- portfolio start -->
+	 <section class="gallery-area">
+		<div class="container">
+			<div class="section-title">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<h2>AREA<span class="color-defult"> Paciente</span></h2>
+						<div class="line-border-center bg-defult"></div>
+						<p>En esta seccion podrás comprobar tus citas previstas o <br>reservar una nueva cita con uno de nuestros especialistas</p>
+					</div>
+				</div>
+				<div class="section-content">
+					<div class="gallery col-3 gutter">
+						<div class="gallery-item gp-two">
+							<div class="thumb">
+								<img src="img/portfolio/1.jpg" alt="">
+								<div class="gallery-hover">
+									<div class="gallery-info">
+										<div class="gallery-btn">
+											<a href="img/portfolio/1.jpg" data-fancybox-group="gallery" class="lightbox-image" title="lightbox view"> <i class="pe-7s-graph2"></i>  </a>
+										</div>
+										<h4><a href="img/portfolio/1.jpg" data-fancybox-group="gallery" class="lightbox-image" title="lightbox view">Comprobar Mis Citas</a></h4>
+										<p><a href="#">Ver todas las citas que tienes agendadas,así como el departamento y el doctor que se te han asignado</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item gp-three">
+						</div>
+						<div class="gallery-item gp-four">
+							<div class="thumb">
+								<img src="img/portfolio/3.jpg" alt="">
+								<div class="gallery-hover">
+									<div class="gallery-info">
+										<div class="gallery-btn">
+											<a href="img/portfolio/3.jpg" data-fancybox-group="gallery" class="lightbox-image" title="lightbox view"> <i class="pe-7s-graph2"></i>  </a>
+										</div>
+										<h4><a href="img/portfolio/3.jpg" data-fancybox-group="gallery" class="lightbox-image" title="lightbox view">Añadir Nueva Cita</a></h4>
+										<p><a href="#">Agendar una nueva cita con uno de nuestros especialistas</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-
-			<div>
-				<i class="fa fa-phone"></i>
-				<p>+34 622 09 20 04</p>
-				<br>
-				<p>⠀⠀⠀+34 900 98 33 21</p>
-			</div>
-
-			<div>
-				<i class="fa fa-envelope"></i>
-				<p><a href="mailto:BGhospitales@support.com">BGhospitales@support.com</a></p>
-			</div>
-
 		</div>
+	</section>
+	<!-- portfolio end -->
 
-		<div class="footer-right">
-
-			<p class="footer-company-about">
-				<span>Ballesteros Grueiro Hospitales</span>
-				Somos un establecimiento destinado para la atención y asistencia a enfermos por medio de personal médico, enfermería, personal auxiliar y de servicios técnicos durante 24 horas, 365 días del año.
-			</p>
-
-			<div class="footer-icons">
-
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-twitter"></i></a>
-				<a href="#"><i class="fa fa-linkedin"></i></a>
-				<a href="#"><i class="fa fa-github"></i></a>
-
-			</div>
-
-		</div>
-
-	</footer>
+</div>
 </body>
 </html>
