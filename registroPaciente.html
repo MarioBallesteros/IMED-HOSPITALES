@@ -19,12 +19,10 @@
 		<img class="upperlogo" width="300" height="150" src="imagenes/nobg-logo.png">
 		<div class="nav">
 		<ul>
-			<li class="menu"><a href="index2.html">INDICE<span class="material-symbols-outlined">menu_open</span></a> </li>
+			<li class="menu"><a href="areaLogin.html">VOLVER⠀<span class="material-symbols-outlined">arrow_back</span></a></li>
 		</ul>
 		</div>
 	</div>
-	<h1 class="infoHospital">IMED Hospitales Online</h1>
-
 <div class="formBg">
 	<div class="formularioPacientes">
 		
@@ -230,7 +228,7 @@
 									// Signed in
 									const user = userCredential.user;
 									// ...
-									
+									window.location.href = "./areaPaciente.html";
 								})
 								.catch((error) => {
 									const errorCode = error.code;

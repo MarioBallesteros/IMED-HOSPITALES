@@ -15,16 +15,18 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+	AQUI IMPORTAR Y CAMBIAR EL SIMBOLO PARA IR ATRAS EN NAVEGACION	
 	<title>HOSPITAL - B.G</title>
 </head>
 <body>
 	
-	<div class="cabecera">
+	<<div class="cabecera">
 		<img class="upperlogo" width="300" height="150" src="imagenes/nobg-logo.png">
 		<div class="nav">
-		<ul>
-			<li class="menu"><a href="index2.html">MENU<span class="material-symbols-outlined">menu_open</span></a> </li>
+			<ul class="navigation">
+				<li><a href="areaLogin.html">REGRESO<span class="material-symbols-outlined">arrow_back</span></a> 
+				</li>
+			
 		</ul>
 		</div>
 	</div>
@@ -177,11 +179,11 @@ const DIA=document.getElementById("Dia");
 var date = new Date();
 
 
+
 const formatDate = (date)=>{
-let formatted_date = date.getFullYear()+"-"+(date.getMonth() + 1)+"-"+date.getDate(); 
+let formatted_date = date.getFullYear()+"-"+(date.getMonth() + 1).toString().padStart(2,"0")+"-"+date.getDate().toString().padStart(2,"0"); 
  return formatted_date;
 }
-
 window.addEventListener('DOMContentLoaded',async ()=>{
 	let opcion="";
 	DIA.disabled=true;
@@ -228,9 +230,8 @@ doc.addEventListener('change',async()=>{
 })
 
 DIA.addEventListener('change',async()=>{
-	Hora.disabled=false;
-	console.log(DIA.value);
-
+	if(formatDate(date)<DIA.value){
+		Hora.disabled=false;
 	const qu =query(collection(db,"Citas"),where("doctor","==",doc.value),where("fecha","==",DIA.value));
 		var horas=["9:00","9:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00","13:30","16:00","16:30","17:00","17:30","18:00","18:30"];
 		var encontrado;
@@ -249,11 +250,20 @@ DIA.addEventListener('change',async()=>{
 
 		})
 		var sentenciaSelect="";
+		sentenciaSelect+=`<option value="">Indique la hora</option>`;
 		for (let index = 0; index < horas.length; index++) {
 			sentenciaSelect+=`<option>${horas[index]}</option>`;
 		}
 		Hora.innerHTML=sentenciaSelect;
+	}else{
+		Hora.disabled=true;
+	}
 })
-
+fors.addEventListener('submit', async (e)=>{
+	e.preventDefault();
+	if(Hora.disabled==true){
+		alert("Dia no valido");
+	}
+})
 </script>
 </html>

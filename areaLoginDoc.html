@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/cssLoginDoc.css">
 	<link rel="stylesheet" type="text/css" href="css/css.css">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -15,99 +19,113 @@
 	<title>HOSPITAL - B.G</title>
 </head>
 <body>
-	
 	<div class="cabecera">
 		<img class="upperlogo" width="300" height="150" src="imagenes/nobg-logo.png">
 		<div class="nav">
 		<ul>
-			<li class="menu"><a href="index2.html">MENU<span class="material-symbols-outlined">menu_open</span></a> </li>
+			<li class="menu"><a href="index2.html">VOLVER⠀<span class="material-symbols-outlined">arrow_back</span></a></li>
 		</ul>
 		</div>
 	</div>
-	
-		<h1 class="infoHospital">Servicios Online Profesionales B.G Hospitales</h1>
-		<div class="formularioPacientes">	<form action="areaMedico.html" method="post">
-		<form action="areaPaciente.html" method="post">
-				<br>
-			<h1>Formulario de Acceso</h1>
-			<br>
-			<label>Usuario:</label>	
-			<br>
-			<input size="22" type="text" name="usuario" placeholder="Escriba su usuario" maxlength="10" required>
-			<br><br>
-			<label>	Contraseña:</label>
-			<br>
-			<input size="24" type="password" name="contra" placeholder="Escriba su contraseña" maxlength="10" required>
-			
-			<br><br><br>
-			<input class="buttonclass" type="submit" value="  Login  ">
-			<br><br>
-
-			</form>
-	</div>
-	
-	<footer class="footer-distributed">
-
-		<div class="footer-left">
-
-			<h3>Hospital<span>B.G</span></h3>
-
-			<p class="footer-links">
-				<a href="#" class="link-1">Home</a>
-				
-				<a href="#">Blog</a>
-			
-				<a href="#">Pricing</a>
-			
-				<a href="#">About</a>
-				
-				<a href="#">Faq</a>
-				
-				<a href="#">Contact</a>
+	<div class="page">
+		<br><br><br>
+		<div class="container">
+		  <div class="left">
+			<div class="login">Hola Dr.</div>
+			<div class="eula">Le recordamos que esta es un área a la cual solo tiene acceso el personal de este centro.</div>
+		  </div>
+		  <div class="right">
+			<svg viewBox="0 0 320 300">
+			  <defs>
+				<linearGradient
+								inkscape:collect="always"
+								id="linearGradient"
+								x1="13"
+								y1="193.49992"
+								x2="307"
+								y2="193.49992"
+								gradientUnits="userSpaceOnUse">
+				  <stop
+						style="stop-color:#ff00ff;"
+						offset="0"
+						id="stop876" />
+				  <stop
+						style="stop-color:#ff0000;"
+						offset="1"
+						id="stop878" />
+				</linearGradient>
+			  </defs>
+			  <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
+			</svg>
+			<div class="form">
+			  <label for="usuario">Usuario:</label>
+			  <input type="text" id="usuario">
+			  <label for="contra">Contraseña:</label>
+			  <input type="password" id="contra">
+			  <input type="submit" id="submit" value="Submit">
+			</div>
+		  </div>
+		</div>
+		<footer>
+			<p>
+				HOSPITALES  <i class="fa fa-heart"></i> 
+				<a target="_blank">BALLESTEROS GRUEIRO </a>
+				- Curar es lo 
+				<a target="_blank">nuestro</a>.
 			</p>
+		</footer>
+	  </div>
 
-			<p class="footer-company-name">Ballesteros Grueiro © 2022</p>
-		</div>
-
-		<div class="footer-center">
-
-			<div>
-				<i class="fa fa-map-marker"></i>
-				<p><span> Carrer d'Emilia Pardo Bazán</span> 46185 La Pobla de Vallbona, Valencia</p>
-			</div>
-
-			<div>
-				<i class="fa fa-phone"></i>
-				<p>+34 622 09 20 04</p>
-				<br>
-				<p>⠀⠀⠀+34 900 98 33 21</p>
-			</div>
-
-			<div>
-				<i class="fa fa-envelope"></i>
-				<p><a href="mailto:BGhospitales@support.com">BGhospitales@support.com</a></p>
-			</div>
-
-		</div>
-
-		<div class="footer-right">
-
-			<p class="footer-company-about">
-				<span>Ballesteros Grueiro Hospitales</span>
-				Somos un establecimiento destinado para la atención y asistencia a enfermos por medio de personal médico, enfermería, personal auxiliar y de servicios técnicos durante 24 horas, 365 días del año.
-			</p>
-
-			<div class="footer-icons">
-
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-twitter"></i></a>
-				<a href="#"><i class="fa fa-linkedin"></i></a>
-				<a href="#"><i class="fa fa-github"></i></a>
-
-			</div>
-
-		</div>
-
-	</footer>
 </body>
+<script>
+	var current = null;
+	document.querySelector('#usuario').addEventListener('focus', function(e) {
+	  if (current) current.pause();
+	  current = anime({
+		targets: 'path',
+		strokeDashoffset: {
+		  value: 0,
+		  duration: 700,
+		  easing: 'easeOutQuart'
+		},
+		strokeDasharray: {
+		  value: '240 1386',
+		  duration: 700,
+		  easing: 'easeOutQuart'
+		}
+	  });
+	});
+	document.querySelector('#contra').addEventListener('focus', function(e) {
+	  if (current) current.pause();
+	  current = anime({
+		targets: 'path',
+		strokeDashoffset: {
+		  value: -336,
+		  duration: 700,
+		  easing: 'easeOutQuart'
+		},
+		strokeDasharray: {
+		  value: '240 1386',
+		  duration: 700,
+		  easing: 'easeOutQuart'
+		}
+	  });
+	});
+	document.querySelector('#submit').addEventListener('focus', function(e) {
+	  if (current) current.pause();
+	  current = anime({
+		targets: 'path',
+		strokeDashoffset: {
+		  value: -730,
+		  duration: 700,
+		  easing: 'easeOutQuart'
+		},
+		strokeDasharray: {
+		  value: '530 1386',
+		  duration: 700,
+		  easing: 'easeOutQuart'
+		}
+	  });
+	});
+	</script>
 </html>

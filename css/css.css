@@ -10,6 +10,7 @@ ul{
 	background-color: #FFFFFFE6;
 	position: sticky;
 	height: 100px;
+	width: 100%;
 	top: 0px;	
 	opacity: 0.7;
 	z-index: 2000;
@@ -199,7 +200,7 @@ font-weight: bold;
 	margin-right: 0px;
 	text-align: center;
 	font-size: 30px;
-	background: white;
+	background: #EEEEEE;
 	height: 1980px;
 	width: 1900px;
 	vertical-align: middle;
@@ -212,7 +213,7 @@ font-weight: bold;
 	margin-right: 100px;
 	text-align: center;
 	font-size: 30px;
-	background: white;
+	background: #EEEEEE;
 	height: 1780px;
 	width: 1705px;
 	vertical-align: middle;
@@ -653,7 +654,7 @@ section {
 
 /* DESPLEGABLE MENU */
 /* DESPLEGABLE MENU */
-E MENU */
+/* DESPLEGABLE MENU */
 
   ul.navigation {
 	text-align: left;

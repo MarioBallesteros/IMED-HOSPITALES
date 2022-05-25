@@ -186,13 +186,12 @@
 		var  contra=generarContra();
 		
 		addDoc(collection(db,'Doctores'),{Nombre, Apellidos, direccion, poblacion,provincia, pais,correo,telefono,usuario,contra,especialidad})
-		fors.reset();
 		createUserWithEmailAndPassword(auth, correo,contra)
 			.then((userCredential) => {
 				// Signed in
 				const user = userCredential.user;
 				// ...
-									
+				window.location.href = "./areaMedico.html";
 				})
 			.catch((error) => {
 				const errorCode = error.code;
