@@ -131,18 +131,20 @@ ul{
 	font-family: 'Open Sans', sans-serif;
 
 }
+
 .nav{
+	margin-top: -150px;
 	margin-left: 800px;
 	list-style: none;
 	text-decoration: none;
 	display: inline-block;
 }
+
 .nav ul li{
 	float: left;
 }
 
-.nav li a{
-	margin-bottom: 40px;
+.nav ul li a{
 	margin-left: 10px;
 	color: #0078C9;
 	text-decoration: none;
@@ -156,17 +158,18 @@ ul{
 .nav li a:hover{
 	color: #53baff;
 	text-decoration: none;
-	padding: 15px 15px;
 	display: block;
 }
 .formularioPacientes{
 	color: #808080;
-	margin-top: 120px;
+	margin-top: 90px;
 	margin-left: 680px;
 	display: inline-block;
 
 }
 .contenedorCentral{
+	margin-top: 50px;
+	margin-left: 200px;
 	width: fit-content;
 	height: fit-content;
 }

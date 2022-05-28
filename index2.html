@@ -12,22 +12,46 @@
 	<link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src=
+	"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js">
+	  </script>
+		<style type="text/css">
+			.bs-example {
+				margin: auto;
+				width: 25%;
+			}
+			  
+			.dropdown:hover .dropdown-menu {
+				display: block;
+			}
+		</style>
 	<title>HOSPITAL - B.G</title>
 </head>
 <body>
 	<div class="cabecera">
 		<img class="upperlogo" width="300" height="150" src="imagenes/nobg-logo.png">
-		<div class="nav">
-				<li><a href="areaLogin.html">Portal Paciente<span class="material-symbols-outlined">personal_injury</span></a> 
-					<a href="areaLoginDoc.html">Portal médico<span class="material-symbols-outlined">emergency</span></a> 
-					<a href="areaLoginRecepcionista.html">Portal Recepción<span class="material-symbols-outlined">description</span></a> 
-				</li>
-			
-		</div>
+		<div class="container">
+            <div class="bs-example">
+                <ul id="nav"
+                    class="nav nav-pills clearfix right" 
+                    role="tablist">
+                    <li class="dropdown">        
+                      <a href="index2.html"class="dropdown-toggle" data-toggle="dropdown">MENU<span class="material-symbols-outlined">menu_open</span></a>   
+                        <ul id="products-menu" 
+                            class="dropdown-menu clearfix" 
+                            role="menu">
+                            <li><a href="areaLogin.html">Portal Paciente<span class="material-symbols-outlined">personal_injury</span></a></li>
+							<li><a href="areaLoginDoc.html">Portal Médico<span class="material-symbols-outlined">emergency</span></a></li>
+							<li><a href="areaLoginRecepcionista.html">Portal Recepción<span class="material-symbols-outlined">description</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
 	</div>
 	<div class="box">
-
 			<div class="imagenes">
 		<div class="abovetext">B.G - HOSPITALES
 			<div class="margintop"><img src="imagenes/factorhumano.png"> </div>
@@ -113,10 +137,10 @@
 			
 					<div class="footer-icons">
 			
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-linkedin"></i></a>
-						<a href="#"><i class="fa fa-github"></i></a>
+						<a href="#"><span class="material-symbols-outlined">local_hospital</span></a>
+						<a href="#"><span class="material-symbols-outlined">healing</span></a>
+						<a href="#"><span class="material-symbols-outlined">bloodtype</span></a>
+						<a href="#"><span class="material-symbols-outlined">vaccines</span></a>
 			
 					</div>
 			

@@ -10,6 +10,10 @@
     box-shadow: 0 5px 20px lightblue;
 }
 
+ul li{
+    margin-left: 630px;
+    margin-top: -90px;
+}
 .well-header {
     font-size: 2em;
     font-weight: bold;
@@ -61,4 +65,29 @@ p, label, checkbox {
 
 .help-block {
     color: #1E2749;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer i {
+    color: red;
+}
+
+footer a {
+    color: #3c97bf;
+    text-decoration: none;
 }

@@ -1,124 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
-	<meta charset="UTF-8">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/cssLoginDoc.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-	<title>HOSPITAL - B.G</title>
+    <title>How to open dropdown 
+      menu on hover in Bootstrap</title>
+    <link href=
+"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+          rel="stylesheet" />
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+  </script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js">
+  </script>
+    <style type="text/css">
+        .bs-example {
+            margin: auto;
+            width: 25%;
+        }
+          
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
 </head>
+  
 <body>
-	<div class="cabecera">
-		<img class="upperlogo" width="300" height="150" src="imagenes/nobg-logo.png">
-		<div class="nav">
-		<ul>
-			<li class="menu"><a href="index2.html">INDICE<span class="material-symbols-outlined">menu_open</span></a> </li>
-		</ul>
-		</div>
-	</div>
-        <div class="page">
-            <div class="container">
-              <div class="left">
-                <div class="login">Login</div>
-                <div class="eula">By logging in you agree to the ridiculously long terms that you didn't bother to read</div>
-              </div>
-              <div class="right">
-                <svg viewBox="0 0 320 300">
-                  <defs>
-                    <linearGradient
-                                    inkscape:collect="always"
-                                    id="linearGradient"
-                                    x1="13"
-                                    y1="193.49992"
-                                    x2="307"
-                                    y2="193.49992"
-                                    gradientUnits="userSpaceOnUse">
-                      <stop
-                            style="stop-color:#ff00ff;"
-                            offset="0"
-                            id="stop876" />
-                      <stop
-                            style="stop-color:#ff0000;"
-                            offset="1"
-                            id="stop878" />
-                    </linearGradient>
-                  </defs>
-                  <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
-                </svg>
-                <div class="form">
-                  <label for="email">Email</label>
-                  <input type="email" id="email">
-                  <label for="password">Password</label>
-                  <input type="password" id="password">
-                  <input type="submit" id="submit" value="Submit">
-                </div>
-              </div>
+        <div class="container">
+            <div class="bs-example">
+                <ul id="nav"
+                    class="nav nav-pills clearfix right" 
+                    role="tablist">
+                    <li class="dropdown">        
+                      <a href="#"
+                         class="dropdown-toggle" 
+                         data-toggle="dropdown">
+                        Menu
+                      </a>   
+                        <ul id="products-menu" 
+                            class="dropdown-menu clearfix" 
+                            role="menu">
+                            <li><a href="">Algo</a></li>
+                            <li><a href="">Gate</a></li>
+                            <li><a href="">Subject</a></li>
+                            <li><a href="">Practise</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-          </div>
-    
-    <footer>
-        <p>
-            Created with <i class="fa fa-heart"></i> by
-            <a target="_blank" href="https://florin-pop.com">Florin Pop</a>
-            - Read how I created this and how you can join the challenge
-            <a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
-        </p>
-    </footer>
-
+        </div>
 </body>
-<script>
-var current = null;
-document.querySelector('#email').addEventListener('focus', function(e) {
-  if (current) current.pause();
-  current = anime({
-    targets: 'path',
-    strokeDashoffset: {
-      value: 0,
-      duration: 700,
-      easing: 'easeOutQuart'
-    },
-    strokeDasharray: {
-      value: '240 1386',
-      duration: 700,
-      easing: 'easeOutQuart'
-    }
-  });
-});
-document.querySelector('#password').addEventListener('focus', function(e) {
-  if (current) current.pause();
-  current = anime({
-    targets: 'path',
-    strokeDashoffset: {
-      value: -336,
-      duration: 700,
-      easing: 'easeOutQuart'
-    },
-    strokeDasharray: {
-      value: '240 1386',
-      duration: 700,
-      easing: 'easeOutQuart'
-    }
-  });
-});
-document.querySelector('#submit').addEventListener('focus', function(e) {
-  if (current) current.pause();
-  current = anime({
-    targets: 'path',
-    strokeDashoffset: {
-      value: -730,
-      duration: 700,
-      easing: 'easeOutQuart'
-    },
-    strokeDasharray: {
-      value: '530 1386',
-      duration: 700,
-      easing: 'easeOutQuart'
-    }
-  });
-});
-</script>
+  
 </html>
