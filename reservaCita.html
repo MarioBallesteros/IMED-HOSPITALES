@@ -61,7 +61,7 @@
                       <br><br><br><br>
                       <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
                         <h5>Observaciones con relación a la cita...</h5>
-                        <textarea name="message" id="message" class="form-control" rows="6" placeholder="Observaciones con relación a la cita..."></textarea>
+                        <textarea name="message" id="observacionesCliente" class="form-control" rows="6" placeholder="Observaciones con relación a la cita..."></textarea>
                       </div>
                     </div>
                     <div class="checkbox">
@@ -90,7 +90,7 @@
 <script type="module">
 	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
 	import { getFirestore,collection,addDoc,query,where,getDocs } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js"
-	import { getAuth,createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+	import { getAuth,createUserWithEmailAndPassword,onAuthStateChanged,signOut } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
 	 // Your web app's Firebase configuration
 	 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 	 const firebaseConfig = {
@@ -106,7 +106,29 @@
 	 const app = initializeApp(firebaseConfig);
 	 const db=getFirestore();
 	 const auth=getAuth();
-	 
+	 //const logout=document.getElementById('Log out');
+	// var Logout='<button>Log out</button>';
+	//logout.innerHTML=Logout;
+	 var nombre=""; 
+	var apellidos="";
+	var correo="";
+	onAuthStateChanged(auth,async(user)=>{
+		if(user){
+			const usEmail=user.email;
+			const q=query(collection(db,"Usuarios"),where("correo","==",usEmail));
+			const querySnapshot = await getDocs(q);
+			querySnapshot.forEach((doc)=>{
+				const dat=doc.data();
+				nombre=dat.Nombre
+				apellidos=dat.Apellidos
+				correo=dat.correo
+			})
+			
+		}else{
+			window.location.href = "./index2.html";
+		}
+	})
+
 	const fors=document.getElementById('form');
 	fors.addEventListener('submit',async (e)  => {
 		e.preventDefault()
@@ -180,7 +202,7 @@ DIA.addEventListener('change',async()=>{
 		const querySnapshot = await getDocs(qu);
 		querySnapshot.forEach((doc)=>{
 			const dat=doc.data();
-			console.log(dat.hora);
+			
 			encontrado=false;
 			for (let index = 0; index < horas.length&&encontrado==false; index++) {
 				if(horas[index]==dat.hora){
@@ -201,11 +223,33 @@ DIA.addEventListener('change',async()=>{
 		Hora.disabled=true;
 	}
 })
-fors.addEventListener('submit', async (e)=>{
+fors.addEventListener('submit',  (e)=>{
 	e.preventDefault();
 	if(Hora.disabled==true){
 		alert("Dia no valido");
+	}else{
+		const doctor=doc.value;
+		const especialidad=espe.value;
+		const fecha=DIA.value.toString();
+		const hora=Hora.value;
+		const observacionesCliente=fors['observacionesCliente'].value;
+		const observacionesDoctor="";
+		console.log(fecha);
+		addDoc(collection(db,'Citas'),{apellidos,doctor,especialidad,fecha,hora,nombre,correo,observacionesCliente,observacionesDoctor})
+		fors.reset();
+		alert("Cita enviada, pulse aceptar para ser redirigido a su areaPaciente")
 	}
 })
+
+/*	
+logout.addEventListener('click',(e)=>{
+e.preventDefault();
+signOut(auth).then(() => {
+alert("sesion cerrada")
+});
+
+});
+*/
+
 </script>
 </html>

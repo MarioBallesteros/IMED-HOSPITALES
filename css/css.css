@@ -22,7 +22,6 @@ ul{
 
 }
 .espaciado{
-	background-color: red;
 	height: 2000px;
 	width: 100%;
 }
@@ -87,7 +86,7 @@ ul{
 	height: 100%;
 	width: 50%;
 	text-align: center;
-	background-color: #D3D3D3	;
+	background-color: whitesmoke ;
 
 
 }
@@ -131,21 +130,29 @@ ul{
 	font-family: 'Open Sans', sans-serif;
 
 }
-
+.margin{
+	margin-top: -110px;
+}
 .nav{
-	margin-top: -150px;
 	margin-left: 800px;
 	list-style: none;
 	text-decoration: none;
 	display: inline-block;
+	font-size: 20px;
+	width: 120px;
+	height: 120px;
+	margin-top: 30px;
 }
+
 
 .nav ul li{
 	float: left;
 }
 
+.nav ul{
+	margin-top: -50px;
+}
 .nav ul li a{
-	margin-left: 10px;
 	color: #0078C9;
 	text-decoration: none;
 	padding: 15px 15px;
@@ -153,7 +160,7 @@ ul{
 	font-size: 18px;
 	font-weight: normal;
 	font-family: 'Josefin Sans', sans-serif;
-	float: left;	
+	float: left;
 }
 .nav li a:hover{
 	color: #53baff;
@@ -324,12 +331,6 @@ font-weight: bold;
 	width: 100%;
 	margin-top: 20px;
 }
-.carne{
-	height: 500px;
-	width: 852px;
-	float: left;
-	position: absolute;
-}
 .bienvenida{
 	float: left;
 	height: 500px;
@@ -357,104 +358,6 @@ font-weight: bold;
 }
 .bienvenidatexto ul li{
 	margin-top: 7px;
-}
-.ensalada{
-	height: 500px;
-	width: 852px;
-	float: right;
-}
-.bot{
-	margin-top: 20px;
-}
-
-.horario{
-	margin-top: 5px;
-	font-size: 15px;
-	color: black;
-	background-color: white;
-	height: 50px;
-	width: 100%;
-	margin-left: 470px;
-	list-style: none;
-	text-decoration: none;
-	display: inline-block;
-}
-.horario li{
-	margin-left: 10px;
-	background-color: white;
-	color: black;
-	text-decoration: none;
-	padding: 15px;
-	display: block;
-	float: left;
-	font-size: 14px;
-	font-weight: bold;
-	font-family: 'Josefin Sans', sans-serif;
-}
-.color{
-	color:#e6ae48;
-}
-.colorContacto{
-	color:#e6ae48;
-	font-size: 22px;
-}
-.numreserva{
-	color: #393939;
-	font-size: 24px;
-	font-family: 'Josefin Sans', sans-serif;
-	margin: 10px 0;
-	font-weight: bold;
-	margin-top: 30px;
-}
-
-.inforestaurante{
-	background-color: white;
-	color: #333333;
-	font-size: 16px;
-	font-family: 'Josefin Sans', sans-serif;
-	margin-bottom: 20px;
-	margin-top: 45px;
-	text-align: center;
-}
-.inforestaurante li a{
-	background-color: white;
-	color: #333333;
-	font-size: 15px;
-	font-family: 'Josefin Sans', sans-serif;
-	margin-bottom: 20px;
-}
-.inforestaurante ul li{
-	margin-top: 5px;
-}
-
-.inforestaurante li a:hover{
-	background-color: white;
-	color: #FFC300;;
-	font-size: 15px;
-}
-
-.politicas{
-	margin-left:705px;
-	margin-top: 75px;
-	list-style: none;
-	text-decoration: none;
-	font-family: 'Josefin Sans', sans-serif;
-	color: #333333;
-	font-size: 18px;
-}
-
-.politicas ul li{
-	float: left;
-	margin-left: 5px;
-	list-style: none;
-	text-decoration: none;
-}
-.politicas li a:hover{
-	font-family: 'Josefin Sans', sans-serif;
-	color:#FFC300;
-	font-size: 18px;
-	list-style: none;
-	text-decoration: none;
 }
 
 /* FOOTER WEB */
@@ -659,51 +562,3 @@ section {
 	}
 
 }
-
-/* DESPLEGABLE MENU */
-/* DESPLEGABLE MENU */
-/* DESPLEGABLE MENU */
-
-  ul.navigation {
-	text-align: left;
-	display: block;
-	margin: 0;
-	padding: 15px 40px 17px 0;
-	list-style: none;
-	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  }
-  ul.navigation li {
-	margin-top: -115px;
-	font: bold 12px/18px sans-serif;
-	display: inline-block;
-	margin-right: -4px;
-	position: absolute;
-	padding: 0px 15px;
-	cursor: pointer;
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	-ms-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	transition: all 0.2s;
-}
-
-  ul.navigation li ul {
-	padding: 0;
-	position: absolute;
-	top: 30px;
-	left: 0;
-	width: 150px;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	display: none;
-	opacity: 0;
-	visibility: visible;
-	-webkit-transiton: opacity 0.2s;
-	-moz-transition: opacity 0.2s;
-	-ms-transition: opacity 0.2s;
-	-o-transition: opacity 0.2s;
-	-transition: opacity 0.2s;
-  }

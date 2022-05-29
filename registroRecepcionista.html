@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+	<title>HOSPITAL - B.G</title>
+</head>
+<body>
+	<div class="cabecera">
+		<img class="upperlogo" width="300" height="150" src="imagenes/nobg-logo.png">
+		<div class="nav">
+		<ul>
+			<li class="menu"><a href="index2.html">INDICE<span class="material-symbols-outlined">menu_open</span></a> </li>
+		</ul>
+		</div>
+	</div>
+	<h1 class="infoHospital">IMED Hospitales Online</h1>
+
+<div class="formBgEspera">
+	<div class="formularioPacientes">
+		
+		<form id="form" method="post" >
+			<fieldset style="width: 480px;" class="formBody">
+			<h1 class="resaltoTexto">Registro Nuevo Recepcionista</h1>
+			<br>
+			<label class="label">Nombre:</label> 
+				<br>
+				<input class="label" size="50" type="text" name="nombre" placeholder="Introduzca su nombre">	
+				<br><br>
+			<label class="label" >Apellidos:</label>
+				<br>
+				<input class="label" size="50" type="text" name="apellidos" placeholder="Introduzca sus dos apellidos">
+				<br><br>
+			<label class="label">Direccion:</label>
+				<br>
+				<input class="label" size="50" type="text" name="direccion" placeholder="Escriba su direccion">
+				<br><br>
+			<label class="label" >Poblacion:</label>
+				<br>
+				<input class="label" size="50" type="text" name="poblacion" placeholder="Escriba su poblacion">
+				<br><br>
+			<label class="label" >Provincia:</label>
+				<br>
+				<input class="label" size="50" type="text" name="provincia" placeholder="Escriba su provincia">
+				<br><br>
+			<label class="label" >País:</label>
+				<br>
+				<input class="label" size="50" type="text" name="pais" placeholder="Escriba su pais">
+				<br><br>
+			<label class="label">Email:</label>
+				<br>
+				<input class="label" size="50" type="email" name="correo" placeholder="Escriba su email">
+				<br><br>
+			<label class="label" >Telefono:</label>
+				<br>
+				<input class="label" size="50" type="tel" name="telefono" placeholder="Escriba su telefono">
+				<br><br><br>
+
+			<label class="label">Usuario:</label>	 
+			<br>
+			<input class="label" size="22" type="text" name="usuario" placeholder="Escriba su usuario" maxlength="10" required>
+			
+			<br><br>
+			
+			<input class="buttonclass" type="submit" value="  Registrarse  ">
+			<br><br>
+			</form>
+		</fieldset>
+	</div>
+</div>
+<footer class="footer-distributed">
+
+	<div class="footer-left">
+
+		<h3>Hospital<span>B.G</span></h3>
+
+		<p class="footer-links">
+			<a href="#" class="link-1">Home</a>
+			
+			<a href="#">Blog</a>
+		
+			<a href="#">Pricing</a>
+		
+			<a href="#">About</a>
+			
+			<a href="#">Faq</a>
+			
+			<a href="#">Contact</a>
+		</p>
+
+		<p class="footer-company-name">Ballesteros Grueiro © 2022</p>
+	</div>
+
+	<div class="footer-center">
+
+		<div>
+			<i class="fa fa-map-marker"></i>
+			<p><span> Carrer d'Emilia Pardo Bazán</span> 46185 La Pobla de Vallbona, Valencia</p>
+		</div>
+
+		<div>
+			<i class="fa fa-phone"></i>
+			<p>+34 622 09 20 04</p>
+			<br>
+			<p>⠀⠀⠀+34 900 98 33 21</p>
+		</div>
+
+		<div>
+			<i class="fa fa-envelope"></i>
+			<p><a href="mailto:BGhospitales@support.com">BGhospitales@support.com</a></p>
+		</div>
+
+	</div>
+
+	<div class="footer-right">
+
+		<p class="footer-company-about">
+			<span>Ballesteros Grueiro Hospitales</span>
+			Somos un establecimiento destinado para la atención y asistencia a enfermos por medio de personal médico, enfermería, personal auxiliar y de servicios técnicos durante 24 horas, 365 días del año.
+		</p>
+
+		<div class="footer-icons">
+
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-linkedin"></i></a>
+			<a href="#"><i class="fa fa-github"></i></a>
+
+		</div>
+
+	</div>
+
+</footer>
+</body>
+<script type="module">
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+	import { getFirestore,collection,addDoc,query,where,getDocs } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js"
+	import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+	 // Your web app's Firebase configuration
+	 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	 const firebaseConfig = {
+	   apiKey: "AIzaSyCp6Q_j8massOsIuXXWhlMp1yuig5ebmjE",
+	   authDomain: "hospital-5f67e.firebaseapp.com",
+	   projectId: "hospital-5f67e",
+	   storageBucket: "hospital-5f67e.appspot.com",
+	   messagingSenderId: "1004398381726",
+	   appId: "1:1004398381726:web:e7c0f93f111a0d93ae898f",
+	   measurementId: "G-KGZ9K8SRR2"
+	 };
+
+	 const app = initializeApp(firebaseConfig);
+	 const db=getFirestore();
+	 const auth=getAuth();
+	const fors=document.getElementById('form');
+	fors.addEventListener('submit',async (e)  => {
+		e.preventDefault()
+	   const Nom = fors['nombre'];
+	   const Apel = fors['apellidos'];
+	   const dir = fors['direccion'];
+	   const pob = fors['poblacion'];
+	   const pr = fors['provincia'];
+	   const pa = fors['pais'];
+	   const email = fors['correo'];
+	   const tel = fors['telefono'];
+	   const usu = fors['usuario'];
+	   const especial = fors['especialidad'];
+		var Nombre= Nom.value;
+		var Apellidos= Apel.value;
+		var direccion= dir.value;
+		var poblacion= pob.value;
+		var provincia= pr.value;
+		var pais= pa.value;
+		var correo= email.value;
+		var telefono= tel.value;
+		var usuario= usu.value;
+		var  contra=generarContra();
+		createUserWithEmailAndPassword(auth, correo,contra)
+			.then((userCredential) => {
+				// Signed in
+				const user = userCredential.user;
+				addDoc(collection(db,'Recepcionistas'),{Nombre, Apellidos, direccion, poblacion,provincia, pais,correo,telefono,usuario,contra})
+				alert("Recepcionista registrado correctamente, su contraseña es "+contra)
+				fors.reset();
+				signInWithEmailAndPassword(auth,"admin@gmail.com","admins")
+				.then( (userCredential) => {
+				// Signed in
+					
+					const user = userCredential.user;
+					
+				
+				})
+				.catch((error) => {
+					const errorCode = error.code;
+					const errorMessage = error.message;
+					
+				});
+				})
+			.catch((error) => {
+				const errorCode = error.code;
+				const errorMessage = error.message;
+				alert("Error, correo repetido");
+				});
+	})
+
+function generarContra(){
+	var chars = "abcdefghijklmnopqrstubwsyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%&?";
+  	var password = '';
+  	var long=Math.floor(Math.random()*(13-8)+8);
+    for(var i=0; i<long; i++){
+      password+=chars.charAt(Math.floor(Math.random()*chars.length));
+    }
+	return password;
+}
+
+</script>
+</html>

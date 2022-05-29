@@ -160,44 +160,40 @@
 			 e.preventDefault()
 		const usuario = fors['usuario'];
 		const pass = fors['contra'];
-		var us="";
-		var corre="";
-		var cont="";
-		const q=query(collection(db,"Doctores"),where("usuario","==", usuario.value),where("contra","==",contra.value))
+		console.log(usuario.value);
+		console.log(pass.value);
+		const q=query(collection(db,"Recepcionistas"),where("usuario","==", usuario.value))
 		const querySnapshot= await getDocs(q);
 		querySnapshot.forEach((doc) =>{
 		const  dat  =doc.data();
-		 us=dat.usuario;
-		 corre=dat.correo;
-		 cont=dat.contra;
-		});
-		if(us!=""){
-				signInWithEmailAndPassword(auth,corre,cont)
+		if(dat.usuario==usuario.value){
+			
+			if(dat.contra==pass.value){
+				signInWithEmailAndPassword(auth,dat.correo,dat.contra)
 				.then( (userCredential) => {
 				// Signed in
 					
 					const user = userCredential.user;
 				// ...
-				window.location.href = "./areaMedico.html";
+				
+				window.location.href = "./verCitasRecep.html";
 				})
 				.catch((error) => {
 					const errorCode = error.code;
 					const errorMessage = error.message;
-					alert("Error al iniciar sesion");
+					alert("El usuario no a podido iniciar sesion")
 				});
-			
-			
-		}
-		 if(us==""){
-		const q=query(collection(db,"Root"),where("usuario","==", usuario.value),where("contra","==",contra.value))
-		const querySnapshot= await getDocs(q);
-		querySnapshot.forEach((doc) =>{
-			const  dat  =doc.data();
-		})
+			}
+			else{
+				alert("Contraseña incorrecta")
+			}
+	
 		}
 		else{
-			alert("Usuario o contraseña mal escrita");
+			alert("El Usuario no existe")
 		}
+			
+		});
 		});
 		/*
 		const logOut=document.getElementById("logOut");

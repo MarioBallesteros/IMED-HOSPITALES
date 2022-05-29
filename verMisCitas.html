@@ -31,30 +31,12 @@
       <thead>
         <tr>
           <th scope="col"><span class="material-symbols-outlined">schedule </span></th>
-          <th scope="col">Especialidad</th>
-          <th scope="col">Doctor</th>
-          <th scope="col">Cancelación</th>
+          <th scope="col">Observacion del Paciente</th>
+          <th scope="col">Observacion del Doctor</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>⠀⠀⠀ <button type="submit" class="material-symbols-outlined">close</button></td>       
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
+      <tbody id="tbody">
+
       </tbody>
     </table>
 	</div>
@@ -67,4 +49,99 @@
         </p>
     </footer>
 </body>
+<script type="module">
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+	import { getFirestore,collection,addDoc,query,where,getDocs,doc,deleteDoc } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js"
+	import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+	 // Your web app's Firebase configuration
+	 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	 const firebaseConfig = {
+	   apiKey: "AIzaSyCp6Q_j8massOsIuXXWhlMp1yuig5ebmjE",
+	   authDomain: "hospital-5f67e.firebaseapp.com",
+	   projectId: "hospital-5f67e",
+	   storageBucket: "hospital-5f67e.appspot.com",
+	   messagingSenderId: "1004398381726",
+	   appId: "1:1004398381726:web:e7c0f93f111a0d93ae898f",
+	   measurementId: "G-KGZ9K8SRR2"
+	 };
+
+	 const app = initializeApp(firebaseConfig);
+	 const db=getFirestore();
+	 const auth=getAuth();
+
+   var correo="";
+	onAuthStateChanged(auth,async(user)=>{
+		if(user){
+			const usEmail=user.email;
+			const q=query(collection(db,"Usuarios"),where("correo","==",usEmail));
+			const querySnapshot = await getDocs(q);
+			querySnapshot.forEach((doc)=>{
+				const dat=doc.data();
+				correo=dat.correo
+			});
+			
+		}else{
+			window.location.href = "./index2.html";
+		}
+	});
+
+   const doctor=document.getElementById("doc");
+  const espe=document.getElementById("especialidad");
+  
+  window.addEventListener('DOMContentLoaded',async ()=>{
+	let opcion="";
+
+	const qu = query(collection(db,"Especialidades"));
+	const querySnapshot = await getDocs(qu);
+	opcion+=`<option value="">Indique especialidad</option>`;
+	querySnapshot.forEach((doc)=>{
+		const dat =doc.data();
+		opcion+=`<option>${dat.nombre}</option>`
+	})
+	espe.innerHTML=opcion;
+});
+
+  espe.addEventListener('change', async()=>{
+    let opcion="";
+  if(espe.value==""){
+    doctor.innerHTML=opcion;
+  }else{
+    const qu = query(collection(db,"Doctores"),where("especialidad","==", espe.value));
+    const querySnapshot = await getDocs(qu);
+    opcion+=`<option value="">Indique su su medico</option>`;
+    querySnapshot.forEach((docu)=>{
+      const dat =docu.data();
+      opcion+=`<option>${dat.Nombre} ${dat.Apellidos}</option>`;
+    });
+    doctor.innerHTML=opcion;
+    }
+
+  });
+  
+  doctor.addEventListener('change',async()=>{
+    if(doctor.value==""){
+
+    }else{
+      var tbody=document.getElementById('tbody');
+      let tabla="";
+      
+      const qu = query(collection(db,"Citas"),where("especialidad","==", espe.value),where("doctor","==",doctor.value),where("correo","==",correo));
+      const querySnapshot= await getDocs(qu);
+      var contador=0;
+      querySnapshot.forEach((doc)=>{
+        const dat=doc.data();
+        tabla+=`<tr>
+          <td align="center">${dat.fecha}⠀${dat.hora}</td>
+          <td align="center">${dat.observacionesCliente}</td>
+          <td align="center">${dat.observacionesDoctor}</td>
+          </tr>`;
+          contador++;
+      });
+      
+      tbody.innerHTML=tabla;
+    }
+  });
+
+  
+</script>
 </html>
