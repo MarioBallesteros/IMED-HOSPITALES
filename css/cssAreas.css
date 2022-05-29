@@ -1,0 +1,27 @@
+
+button {
+	border-radius: 20px;
+	border: 1px solid #0078C9;
+	background-color: #0078C9;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+button.ghost {
+	border-color: #FFFFFF;
+    margin-left: 870px;
+    font-size: 14px;
+    }
