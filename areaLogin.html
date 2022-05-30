@@ -125,7 +125,7 @@ signInButton.addEventListener('click', () => {
 				
 				const user = userCredential.user;
 			// ...
-			
+			alert("Va a ser redireccionado a su Area");
 			window.location.href = "./areaPaciente.html";
 			})
 			.catch((error) => {
@@ -144,16 +144,7 @@ signInButton.addEventListener('click', () => {
 		
 	});
 	});
-	/*
-	const logOut=document.getElementById("logOut");
-logOut.addEventListener('click',e=>{
-e.preventDefault();
-signOut(auth).then(() => {
-alert("sesion cerrada")
-});
-
-});
-*/
+	
 </script>
 
 </html>

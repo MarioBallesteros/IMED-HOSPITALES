@@ -110,10 +110,10 @@
       const botonX=tbody.querySelectorAll('.material-symbols-outlined');
       botonX.forEach(btn => {
             btn.addEventListener('click', async (event) => {
-                console.log(event.target.dataset.id);
+                
                 const id=event.target.dataset.id;
                 const text=document.getElementById(id);
-                console.log(text.value);
+             
                 await updateDoc(doc(db, "Citas", id ), {
                   observacionesDoctor: text.value
               });

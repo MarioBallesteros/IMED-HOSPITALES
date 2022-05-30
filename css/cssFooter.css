@@ -22,3 +22,10 @@ footer a {
     color: #3c97bf;
     text-decoration: none;
 }
+.nav ul li{
+        margin-top: 40px;
+}
+.upperlogo{
+    margin-top: -200px;
+    margin-bottom: 70px;
+}

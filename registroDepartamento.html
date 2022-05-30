@@ -29,49 +29,17 @@
 <div class="formBgEspera">
 	<div class="formularioPacientes">
 		
+		<br><br><br><br><br><br><br><br><br><br><br>
 		<form id="form" method="post" >
 			<fieldset style="width: 480px;" class="formBody">
-			<h1 class="resaltoTexto">Registro Nuevo Recepcionista</h1>
+			<h1 class="resaltoTexto">Registro Nuevo Departamento</h1>
 			<br>
-			<label class="label">Nombre:</label> 
+			<label class="label">Nombre de la Especialidad:</label> 
 				<br>
-				<input class="label" size="50" type="text" name="nombre" placeholder="Introduzca su nombre">	
+				<input class="label" size="50" type="text" name="nombre" placeholder="Introduzca Nombre Al Departamento">	
 				<br><br>
-			<label class="label" >Apellidos:</label>
-				<br>
-				<input class="label" size="50" type="text" name="apellidos" placeholder="Introduzca sus dos apellidos">
-				<br><br>
-			<label class="label">Direccion:</label>
-				<br>
-				<input class="label" size="50" type="text" name="direccion" placeholder="Escriba su direccion">
-				<br><br>
-			<label class="label" >Poblacion:</label>
-				<br>
-				<input class="label" size="50" type="text" name="poblacion" placeholder="Escriba su poblacion">
-				<br><br>
-			<label class="label" >Provincia:</label>
-				<br>
-				<input class="label" size="50" type="text" name="provincia" placeholder="Escriba su provincia">
-				<br><br>
-			<label class="label" >País:</label>
-				<br>
-				<input class="label" size="50" type="text" name="pais" placeholder="Escriba su pais">
-				<br><br>
-			<label class="label">Email:</label>
-				<br>
-				<input class="label" size="50" type="email" name="correo" placeholder="Escriba su email">
-				<br><br>
-			<label class="label" >Telefono:</label>
-				<br>
-				<input class="label" size="50" type="tel" name="telefono" placeholder="Escriba su telefono">
-				<br><br><br>
-
-			<label class="label">Usuario:</label>
-			<br>
-			<input class="label" size="22" type="text" name="usuario" placeholder="Escriba su usuario" maxlength="10" required>
-			<br><br>
 			
-			<input class="buttonclass" type="submit" value="  Registrarse  ">
+			<input class="buttonclass" type="submit" value="  Crear Departanento  ">
 			<br><br>
 			</form>
 		</fieldset>
@@ -109,26 +77,11 @@
 	fors.addEventListener('submit',async (e)  => {
 		e.preventDefault()
 	   const Nom = fors['nombre'];
-	   const Apel = fors['apellidos'];
-	   const dir = fors['direccion'];
-	   const pob = fors['poblacion'];
-	   const pr = fors['provincia'];
-	   const pa = fors['pais'];
-	   const email = fors['correo'];
-	   const tel = fors['telefono'];
-	   const usu = fors['usuario'];
+	 
 		var Nombre= Nom.value;
-		var Apellidos= Apel.value;
-		var direccion= dir.value;
-		var poblacion= pob.value;
-		var provincia= pr.value;
-		var pais= pa.value;
-		var correo= email.value;
-		var telefono= tel.value;
-		var usuario= usu.value;
-		var  contra=generarContra();
 		
-		addDoc(collection(db,'Doctores'),{Nombre, Apellidos, direccion, poblacion,provincia, pais,correo,telefono,usuario,contra})
+		
+		addDoc(collection(db,'Especialidades'),{Nombre})
 		createUserWithEmailAndPassword(auth, correo,contra)
 			.then((userCredential) => {
 				// Signed in
@@ -156,14 +109,5 @@
 				});
 	})
 
-function generarContra(){
-	var chars = "abcdefghijklmnopqrstubwsyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%&?";
-  	var password = '';
-  	var long=Math.floor(Math.random()*(13-8)+8);
-    for(var i=0; i<long; i++){
-      password+=chars.charAt(Math.floor(Math.random()*chars.length));
-    }
-	return password;
-}
 </script>
 </html>

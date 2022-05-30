@@ -165,7 +165,7 @@
 		var us="";
 		var corre="";
 		var cont="";
-		const q=query(collection(db,"Doctores"),where("usuario","==", usuario.value),where("contra","==",contra.value))
+		const q=query(collection(db,"Doctores"),where("usuario","==", usuario.value),where("contra","==",pass.value))
 		const querySnapshot= await getDocs(q);
 		querySnapshot.forEach((doc) =>{
 		const  dat  =doc.data();
@@ -180,6 +180,7 @@
 					
 					const user = userCredential.user;
 				// ...
+				alert("Va a ser redireccionado a su Area");
 				window.location.href = "./areaMedico.html";
 				})
 				.catch((error) => {
@@ -194,10 +195,11 @@
 			 let ad="";
 			 let contraAd="";
 			 let correoAd="";
-		const q=query(collection(db,"Root"),where("usuario","==", usuario.value),where("contra","==",contra.value))
+		const q=query(collection(db,"Root"),where("usuario","==", usuario.value),where("contra","==",pass.value))
 		const querySnapshot= await getDocs(q);
 		querySnapshot.forEach((doc) =>{
 			const  dat  =doc.data();
+			
 			ad=dat.usuario;
 			contraAd=dat.contra;
 			correoAd=dat.correo;
@@ -210,6 +212,7 @@
 					
 					const user = userCredential.user;
 				// ...
+				alert("Va a ser redireccionado a su Area");
 				window.location.href = "./areaRoot.html";
 				})
 				.catch((error) => {
@@ -224,15 +227,6 @@
 		}
 	}
 		});
-		/*
-		const logOut=document.getElementById("logOut");
-	logOut.addEventListener('click',e=>{
-	e.preventDefault();
-	signOut(auth).then(() => {
-	alert("sesion cerrada")
-	});
-	
-	});
-	*/
+		
 	</script>
 </html>
